@@ -1,0 +1,61 @@
+/* .textfield{
+width: 275px;
+height: 30px;
+border-radius: 4px;
+display: block;
+padding: 5px;
+box-sizing: border-box;
+margin: 8px auto;
+border: 1px solid #e8e8e8;
+} */
+
+#commentbox{
+    width: 275px;
+    height: 60px;
+    margin: auto;
+    display: block;
+    border-radius: 4px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+}
+
+#contactoptions {
+    width: 275px;
+    display:block;
+    margin: auto;
+    padding: 6px 0;
+
+}
+
+.indcontentwrapper{
+    display:block;
+    padding: 3px;
+}
+
+.grayline {
+    border-top: .4px solid rgba(192,192,192,0.3);
+}
+
+div.indcontentwrapper label {
+    margin-left: 5px;
+    vertical-align: top;
+}
+
+.phonedisclaimer{
+        font-size: .66em;
+        color: #555;
+        padding-bottom: 5px;
+
+    }
+
+
+ #shuttleheader{
+display: block;
+margin-bottom: 10px;
+    }
+
+#preferredheader{
+margin-bottom: 6px;
+
+    }

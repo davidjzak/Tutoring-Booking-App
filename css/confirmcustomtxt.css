@@ -1,0 +1,46 @@
+.textfield{
+
+    width: 275px;
+    height: 40px;
+    border-radius: 4px;
+    display: block;
+    padding: 15px 5px 5px 15px;
+    box-sizing: border-box;
+    margin: 8px auto;
+    border: 1px solid #e8e8e8;
+    z-index: 1;
+    overflow:hidden;
+    
+    }
+    
+    .texttop{
+    text-indent: -9999px;
+    opacity: 100;
+    width: 80px;
+    display: block;
+    padding: 0 8px;
+    box-sizing: border-box;
+    margin: -45px auto 0px auto;
+    background-color: white;
+    z-index:0;
+    position:relative;
+     left:-80px;
+    font-size:.8em;
+    color: #888;
+    
+    -webkit-filter: blur(0);
+    }
+    
+    
+    .textwrap{
+    width: 275px;
+    margin:35px auto;
+    }
+    
+    .defconfirmtext{
+    
+    }
+
+    #textname{
+        margin-top: 0px;
+    }

@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    }
+    
+    #vehiclewrapper{
+    
+    text-align: center
+    }
+    
+    
+    
+    #dropyear{
+    border-radius: 6px;
+   /* border: 1px solid #777;*/
+    display: inline-block;
+    height: 100%;
+    margin-top: 10px;
+    }
+    
+    .first {
+    width: 273px;
+    height: 36px;
+    border-radius: 6px;
+    /*border: 1px solid #777;*/
+    position: relative;
+    text-align: left;
+    
+    }
+    
+    .innerd{
+    height: 36px;
+    text-align: left;
+    }
+    
+    .defaultd { 
+    margin-bottom: 1px;
+    }
+    
+    ul{
+    display: none;
+    padding-left: 20px;
+    list-style-type: none;
+    }
+    
+    .arrow{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    }
+    
+    
+    .untoucheddrop {
+    font-size: 1.1em;
+    position: absolute;
+    left: 12px;
+    top: 5px;
+    
+    }
+    
+    .dropdownv{
+    
+    margin: 5px auto;
+    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+    display: inline-block;
+    height: 100%;
+    }
+    
+    /* drop down in closed state with selected year */
+    .state2{
+    margin-left: 20px;
+    }
+    
+    .bold{
+    font-weight: bold;
+    }
+    
+    .offlimits {
+    color: #888;
+    }
+    
+    .hide{
+    display:none;
+    }
+    
+    .smalltext {
+    font-size:.8em;
+    color: #888;
+    }
+    
+    
+    
+
+    

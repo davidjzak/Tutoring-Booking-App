@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="script/jquery.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/modal.js"></script>
+    <script src="script/scedule.js"></script>
+    <script src="script/confirm.js"></script>
+    <script src="script/appointment.js"></script>
+    <script src="script/confirm.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/scedule.css" />
+    <link rel="stylesheet" type="text/css" href="css/confirm.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/modal.css" />
+    <link rel="stylesheet" type="text/css" href="css/appointment2.css" />
+  </head>
+  <body onload="finalconfirmLoad()">
+    <div id="app">
+      <!-- header img section -->
+
+      <!-- Giant checkmark Icon-->
+      <img src="imgs/newarrowappointment.png" alt="" id="giantCheck" />
+      <hr class="greyline" />
+      <br />
+      <label class="boldgrey">Location:</label>
+      <p class="mcor">
+        Toronto, ON <br />
+        3200 St. Clair Avenue
+      </p>
+      <br />
+      <!--dynamic info for vehicle-->
+      <label class="boldgrey">Student:</label>
+      <p id="vehicleDynamicInfo"></p>
+      <br />
+      <!-- dynamic info for services selected-->
+
+      <label class="boldgrey">Subjects:</label>
+      <p id="serviceDynamicInfo"></p>
+      <br />
+      <label></label>
+      <p id="serviceDynamicComment"></p>
+      <br />
+
+      <!--- Scedule info -->
+      <label class="boldgrey">Drop off:</label>
+      <p id="sceduleDynamicInfo"></p>
+      <br />
+      <p id="synccal">
+        <b><u>Sync with Calendar</u>></b>
+      </p>
+      <br />
+      <!-- contact dynamic info-->
+      <label class="boldgrey">Contact:</label>
+      <div id="contactcontainer" class="inline">
+        <p id="contactDynamicName"></p>
+        <br />
+        <p id="contactDynamicPhone"></p>
+        <br />
+        <p id="contactDynamicEmail"></p>
+        <br /><br />
+      </div>
+      <br />
+      <!-- comments dynamic info-->
+      <label class="boldgrey">Shuttle:</label>
+      <p id="shuttleDynamicInfo"></p>
+      <br />
+      <label class="boldgrey">Comments:</label>
+      <p id="commentDynamicInfo"></p>
+      <br />
+      <div id="whatnextcontainer">
+        <hr class="greyline" />
+        <br />
+        <h3>Whats Next?</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in
+          hendrerit turpis. Nulla eu turpis arcu.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+#giantCheck{
+    margin: 10px 0px;
+    display: block;
+    
+    }
+    
+    label + p, .textright + p, #contactcontainer p, .inline p{
+    display: inline-block;
+    vertical-align: top; /* keep long strings in proper formatting */
+    max-width: 250px;
+    left: 32%;
+    }
+    
+    label {
+        text-align: left;
+        margin: 2px 20px 10px 30px;
+        display: inline-block;
+        width:65px;
+    }
+    
+    
+    /* keeps contact information properly formatted in line */
+    #contactcontainer {
+    display:inline-block;
+    vertical-align: top; /* text stay aligned with top of element parent */
+    
+    }
+    
+    #whatnextcontainer{
+        margin: 0 20px 0 30px;
+    }
+    
+    #synccal{
+        margin-top: -5px;
+        color:#347636;
+        display: inline-block;
+        display: inline-block;
+    vertical-align: top; /* keep long strings in proper formatting */
+    max-width: 250px;
+    margin-left: 114px;
+   
+    
+    }
+    .greyline {
+        border-top: .5px solid rgba(192,192,192,0.3);
+    }
+    
+    .boldgrey {
+        color: #333;
+        font-weight: bold;
+    }
+    
+    label + span, label + p {
+        display:inline-block;
+        left: 30%;
+    width: 60%;
+    vertical-align: middle;
+    word-break: break-word;
+    }
+    
+    .textright{
+        text-align: right;
+        width: 100px;
+        display:inline-block;
+        margin-right: 25px;
+        margin-bottom: 7px;
+    }
+    
+    .inline{
+        display: inline-block;
+    }
+    
+    .mcor {
+        margin-left: -2px;
+        vertical-align: top;
+    }
+
+ 

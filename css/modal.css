@@ -1,0 +1,293 @@
+#modalcontainer{
+    background-color: rgba(0,0,0, .7);
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 30;
+    min-height: 100%;
+    }
+    
+    #exitxmodal{
+    text-align: center;
+    margin: 7% auto;
+    width: 90%;
+    display: block;
+    overflow: hidden;
+    }
+    
+    #message2{
+        background-color: white;
+        width : 80%;
+        padding: 15px;
+        margin:  12% auto;
+        border-radius: 12px;
+        position:relative;
+        overflow: hidden;
+        box-sizing:border-box;
+        }
+        
+
+
+    #message{
+    background-color: white;
+    width : 80%;
+    padding: 15px;
+    margin:  12% auto;
+    border-radius: 12px;
+    position:relative;
+    overflow: hidden;
+    box-sizing:border-box;
+    }
+
+    @media screen and (min-width:600px) {
+        #message, #message2 {
+            width:320px;
+        }}
+    
+    .greenbutton{
+            background-color:#347636;
+            width: 205px; 
+            height: 42px;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            margin: 10px 40px;
+            border: none;
+           
+        }
+        .greenbuttonreverse{
+            background-color:white;
+            width: 205px; 
+            height: 42px;
+            border-radius: 6px;
+            color: #347636;
+            font-weight: bold;
+            margin: 10px 40px;
+            border: 2px solid #347636;
+           
+        }
+    
+    .greenbutton:hover, .greenbuttonreverse:hover{
+            background-color:#03a23c;
+            /* width: 205px; */
+            height: 42px;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            margin: 10px 40px;
+            border: none;
+           
+        }
+    div#message p, div#message button{
+    margin: 15px auto;
+    text-align:center;
+    
+    display: block;
+    }
+
+    
+    
+    #back{
+    width: 100%;
+    height: 100%;
+    
+    }
+    
+    #xmodal {
+    left: 90%;
+    position: absolute;
+    }
+    
+    
+    div#message #validate{
+    border: 1px solid #999;
+    width: 50%;
+    height: 40px;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 1em;
+    font-weight: bold;
+    display:inline;
+    
+    }
+    
+    
+    div#message #validate:hover{
+    border: 1px solid #999;
+    width: 50%;
+    height: 40px;
+    border-radius: 6px;
+    background-color:#347636;
+    font-size: 1em;
+    color: white;
+    
+    
+    }
+    
+    #vinmodaltext{
+    text-align: left !important;
+    font-weight:bold;
+    }
+    
+    
+    #vininfo {
+    margin:auto;
+    width: 90%;
+    display: block;
+    
+    
+    }
+    
+    
+    #valinput{
+    width: 80%;
+    height: 33px;
+    border-radius: 6px;
+    border: 1px solid #999;
+    
+    }
+    
+    div#message .servicedesctext{
+    font-weight: bold;
+    
+    }
+    
+    div#message .servicedesctext, div#message .sdescinnertext{
+    text-align: left;
+    }
+
+    div#message #servicemodalheader {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: left;
+    }
+
+
+    .servicedesctext {
+        font-weight: normal;
+    }
+
+    div#message .serviceinnerdesctext{
+        font-weight: normal;
+        text-align: left;
+    }
+
+
+    
+#locationcontainer{
+    background-color: rgba(0,0,0, .7);
+    width: 100%;
+    
+    position: absolute;
+    display: none;
+    z-index: 120;
+    }
+
+    .innerbox{
+        border: 1px solid #999;
+        margin: 5%;
+        padding: 2%;
+        border-radius: 6px;
+        }
+        
+        div#message div.innerbox .locsmalltext{
+        font-size: 12px;
+        color: #333333;
+        text-align: left;
+        margin: 2px;
+        
+        }
+        
+        .loclink{
+        display: inline-block;
+        margin-bottom: 10px;
+        padding-top: 15px;
+        color: black;
+        font-weight: bold;
+        }
+        
+        div#message div.innerbox .locnewheader{
+        color: black;
+        font-weight: bold;
+        text-align: left;
+        }
+        
+
+        .tinytext {
+            font-size:.9em;
+        }
+
+        .block {
+
+            display: block;
+        }
+
+    .pheader {
+        margin-top: 20px;
+        margin-left: 3.5px;
+        margin-bottom: 4px;
+    }
+
+    .tmodalindent{
+    margin-left: 3.5px;
+
+    }
+
+    .bottomindent {
+       margin-bottom: 10px;
+    }
+
+    .topindent {
+
+        margin-top: -10px;
+        margin-bottom: 6px;
+    }
+
+
+    #dropofftime{
+display: none;
+/* allows edit button to be positioned correctly on desktop view */
+position: relative;
+    }
+
+    .nobotmar{
+        margin-bottom: 0px !important;
+    }
+
+    .notopmar{
+margin-top: 8px !important;
+    }
+    
+    .commentbuttonwidth {
+width: 90%;
+ margin-left: 4% !important;
+margin-right: 5% !important;
+    }
+
+.cmodalheader {
+    
+    margin-top: 23px;
+    margin-bottom: 4px;
+
+}
+
+.csmalltext {
+
+    font-size: .85em;
+}
+
+
+/*comment box in modal for service */
+#commentbox3{
+    width: 98%;
+    margin: auto;
+    display: block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+    padding: 4px;
+    padding-left: 8px;
+    padding-top: 8px;
+    font-size: .99em;
+    height: 119px;
+}

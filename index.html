@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="script/jquery.js"></script>
+<script src="script/transition.js"></script>
+<script src="script/newvehicle.js"></script>
+<script src="script/scedule.js"></script>
+<script src="script/main.js"></script>
+<script src="script/modal.js"></script>
+<script src="script/servicefunctions.js"></script>
+<script src="script/confirm.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/newvehicle.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/modal.css">
+<link rel="stylesheet" type="text/css" href="css/vehiclestart.css">
+<link rel="stylesheet" type="text/css" href="css/service.css">
+<link rel="stylesheet" type="text/css" href="css/scedule.css">
+<link rel="stylesheet" type="text/css" href="css/confirm.css">
+<link rel="stylesheet" type="text/css" href="css/appointment.css">
+<link rel="stylesheet" type="text/css" href="css/confirmcustomtxt.css">
+<link rel="stylesheet" type="text/css" href="css/header.css">
+</head>
+<body>
+<div id="app">
+
+<!-- HEADER FOR APP-->
+<header id="headerapp" class="headerappvehicle">
+<!-- <img id="vhead" src="imgs/vehicleheader.png"></img> -->
+<img  id="xreset" src="imgs/xsym.png" onclick="xres();"></img>
+<img id="cantiresymbol" src="imgs/student.png"></img>
+<img id="bookappoint" src="imgs/bookingauto.png"></img>
+<!-- <p class="headertext">Booking an automotive appointment in</p> -->
+<p class="dynamicheader">TUTOR STAR</p>
+</header>
+
+<!-- Vehicle symbol and information-->
+
+<div class="stepicon" id="blankvehicleicon">
+ <span class="activeicon">1</span><p class="boldtext">New Student Information</p>
+<!-- <img id="v1select" class="stepicon" src="imgs/vehicleselsym.png"></img> -->
+</div>
+
+<div id="filledvehicleicon" class="stepicon" onclick="vehicleopentrans()">
+  <span class="editicon"><img src="imgs/whitecheck.png"></img></span>  <p id="vehicleDynamicInfo" class="smallindent inlinetext"></p>
+<a onclick="vehicleopentrans()" href="javascript:void(0);" class="editbutton">Edit</a>
+
+</div>
+
+<!-- VEHICLE SECTION -->
+<div id="vehiclewrapper">
+
+  <!-- dropdown for year -->
+  <div id="dropyear" class="dropdownv">
+  <div class="closed first">
+  <p class="state1 untoucheddrop ">Age</p>
+  <p class="state2 smalltext hide"> Age </p>
+  <p id="dynamicyear" class="state2 "></p>
+  <img class="arrow" src="imgs/arrowopen.png">
+  </div>
+  <ul id="yearul">
+  <li class="innerd"></li>
+  <li class="innerd">4 - 8 years old</li>
+  <li class="innerd">8- 12 years old</li>
+  <li class="innerd">13 - 17 years old</li>
+  <li class="innerd">18+ years old</li>
+  
+  </ul>
+  </div>
+
+  <!-- dropdown for make -->
+  <div id="make" class="dropdownv">
+  <div  class="closed first">
+  <p class="state1 untoucheddrop "> Level of Education</p>
+  <p class="state2 smalltext hide"> Level of Education </p>
+  <p id="dynamicmake" class="state2 "></p>
+  <img class="arrow" src="imgs/arrowopen.png">
+  </div>
+  <ul id="makeul">
+  <li class="innerd">Primary School level</li>
+  <li class="innerd">Middle School level</li>
+  <li class="innerd">Post Secondary level</li>
+  <li class="innerd">University/ College level</li>
+  <li class="innerd">Graduate School level</li>
+  </ul>
+  </div>
+
+  <!-- dropdown for model -->
+  <div id="model" class="dropdownv">
+  <div  class="closed first">
+  <p class="state1 untoucheddrop ">Multiple Subjects</p>
+  <p class="state2 smalltext hide">  Multiple Subjects</p>
+  <p id="dynamicmodel" class="state2 "></p>
+  <img class="arrow" src="imgs/arrowopen.png">
+  </div>
+  <ul id="modelul">
+  <li class="innerd">Learning Multiple Subjects</li>
+  <li class="innerd"> Learning One Subject</li>
+
+  </ul>
+  </div>
+
+
+  <div id="mileage" class="dropdownv">
+        <div  class="closed first">
+        <p class="state1 untoucheddrop ">Session Length </p>
+        <p class="state2 smalltext hide">Session Length </p>
+        <p id="dynamicmileage" class="state2 "></p>
+        <img class="arrow" src="imgs/arrowopen.png">
+        </div>
+        <ul id="mileageul">
+        <li class="innerd">1 hr</li>
+        <li class="innerd">  2 hours </li>
+        <li class="innerd"> 3 hours </li>
+        <li class="innerd"> 4 hours </li>
+        <li class="innerd"> 5 hours or more </li>
+        </ul>
+        </div>
+
+<!-- 
+ <a href="javascript:void(0);" onclick="serviceopentrans()"><img src="imgs/nextservice.png" id="nextservice" class="normalindent"></img> </a> -->
+ <button class="nextconfirm normalindent" onclick="serviceopentrans()" id="nextservice">Next: Subjects</button>
+ <br>
+</div>
+<!-- <img  id="xreset" src="imgs/xsym.png" onclick="xres();"></img> -->
+
+
+<!-- Service icons -->
+<div id="blankserviceicon" class="stepicon">
+<!-- <img src="imgs/serviceicongrey.png" class="stepicon"></img><br> -->
+<span class="futureicon">2</span><p class="inlinetext"> Select Your Service</p>
+<br>
+</div>
+
+<div id="blankserviceactiveicon" class="stepicon">
+<span class="activeicon">2</span><p class="boldtext"> Select Your Services</p>
+
+<!-- <img src="imgs/serviceactive.png" id="serviceactive"></img> -->
+</div>
+
+<div id="filledserviceicon" class="stepicon" onclick="serviceopentrans()">
+        <span class="editicon"><img src="imgs/whitecheck.png"></img></span> <div class="stopoverflow"><p id="serviceDynamicInfo" class="smallindent inlinetext"></p></div><a href="javascript:void(0);" onclick="serviceopentrans()" class="editbutton"> Edit </a>
+<br>
+</div>
+
+<!-- SERVICE SECTION -->
+<div id="servicecontainer">
+        <!-- new icon for vehicle edit -->
+        <div id="outsidebox">
+        <div id="singlecheckidk"  onclick="checkpopup()" class="unchecked single"  data-forx=" I'm not sure what services I need "></div><span  class="idkdesc"> I'm not sure what services I need </span>
+        </div>
+        <div id="repaira" class="saccordion">
+                <div class="innerscaccordion" onclick="openRepair()">Math<b id="repaircheckcounter"></b><img class="arrow" src="imgs/arrowopen.png"></div>
+                <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="Basic Math"></div> <span  class="sdesc"> Basic Math </span></div>
+                        <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="Algebra"></div><span  class="sdesc"> Algebra </span></div>
+                        <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="Calculus"></div><span  class="sdesc"> Calculus </span></div>
+        </div>
+        <div id="oilchangea" class="saccordion">
+            <div class="innerscaccordion" onclick="openOil()"> History <b id="oilcheckcounter"></b><img class="arrow" src="imgs/arrowopen.png"></div>
+            <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="Ancient History"></div> <span  class="sdesc"> Ancient History </span> </div>
+            <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="Recent History"></div> <span  class="sdesc"> Recent History  </span></div>
+        </div>
+        <div id="tiredrop" class="saccordion closeddrop" >
+                <div class="innerscaccordion" onclick="openTire()" >English Services <b id="tirecheckcounter"></b><img class="arrow" src="imgs/arrowopen.png"></img></div>
+                        <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="Grammar"></div> <span  class="sdesc">Grammar </span> </div>
+                        <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="English Lit"></div><span  class="sdesc"> English Lit </span></div>
+                        <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="Essay Writing 101"></div><span  class="sdesc"> Essay Writing 101 </span></div>
+                        <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="Poetry"></div> <span  class="sdesc"> Poetry </span></div>
+        </div>
+
+        <div id="brakea" class="saccordion">
+                <div class="innerscaccordion" onclick="openBrake()">Science<b id="brakecheckcounter"></b><img class="arrow" src="imgs/arrowopen.png"></div>
+                <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="Elementary Science"></div><span  class="sdesc"> Elementary Science </span></div>
+                <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="HighSchool Science"></div><span  class="sdesc"> HighSchool Science</span> </div>
+
+        </div>
+        <div id="batterya" class="saccordion">
+                <div class="innerscaccordion" onclick="openBattery()" >Business <b id="batterycheckcounter"></b><img class="arrow" src="imgs/arrowopen.png"></div>
+                <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="Public Speaking"></div><span  class="sdesc"> Public Speaking </span></div>
+                        <div class="innerscaccordion hideaccord"> <div class="unchecked"  data-forx="Economics"></div><span  class="sdesc"> Economics </span></div>
+
+        </div>
+        <p class="commentspace boldtext"> Comments:</p>
+        <textarea  onchange="changetextareasize(this)" oninput="changetextareasize(this)" name="textarea" id="commentbox2"  name="commentbox" ></textarea>
+
+        <a href="javascript:void(0);" onclick="sceduleopentrans()"><button id="nextconfirm">NEXT: SCHEDULE</button></a>
+        <br>
+        <!-- <img  id="xreset" src="imgs/xsym.png"  onclick="xres();"></img> -->
+        </div>
+
+
+
+<!-- Scedule Header-->
+<div id="blanksceduleicon" class="stepicon">
+<span class="futureicon" id="month">3</span><p class="inlinetext"> Schedule Your Tutoring Date</p>
+</div>
+
+<div id="blanksceduleactiveicon" class="stepicon">
+                <span class="activeicon">3</span><p class="inlinetext boldtext"> Schedule Your Tutoring Date</p>
+</div>
+
+<div id="filledsceduleicon" class="stepicon"  onclick="sceduleopentrans()">
+        <span class="editicon"> <img src="imgs/whitecheck.png"></img></span><div class="stopoverflow" ><p id="sceduleDynamicInfo" class="smallindent inlinetext"></p></div><a href="javascript:void(0);" onclick="sceduleopentrans()" class="editbutton">Edit</a>
+</div>
+
+<!-- Scedule Section -->
+<div id="scedulewrapper">
+        <!-- <p class=" normalindent"> Please request a drop-off date and time: </p><br> -->
+        <div class ="container">
+                <section id="monthhide">
+            <div class="month"  >
+            <p class="arrowmonth"> < <strong class="monthheadermargin"> January, 2019 </strong> >  </p>
+            </div>
+            <table>
+            <tr>
+            <th> S </th>
+            <th> M </th>
+            <th> T </th>
+            <th> W </th>
+            <th> T </th>
+            <th> F </th>
+            <th> S </th>
+
+            </tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td> 01 </td>
+            <td id="firstdate"> 02 </td>
+            <td class="cal"> 03</td>
+            <td class="cal alttime3">04</td>
+            <td> 05</td>
+            </tr>
+            <tr>
+            <td class="cal"> 06 </td>
+            <td class="cal alttime3"> 07 </td>
+            <td class="cal greyedout"> 08 </td>
+            <td class="cal"> 09 </td>
+            <td class="cal greyedout"> 10 </td>
+            <td> 11 </td>
+            <td> 12 </td>
+            </tr>
+            <tr>
+            <td  class="cal alttime3"> 13 </td>
+            <td class="cal"> 14 </td>
+            <td class="cal greyedout"> 15 </td>
+            <td class="cal"> 16 </td>
+            <td class="cal greyedout"> 17 </td>
+            <td class="cal"> 18 </td>
+            <td> 19 </td>
+            </tr>
+            <tr>
+            <td class="cal"> 20 </td>
+            <td class="cal alttime3"> 21 </td>
+            <td class="cal"> 22 </td>
+            <td class="cal"> 23 </td>
+            <td class="cal greyedout"> 24 </td>
+            <td class="cal"> 25 </td>
+            <td class="cal alttime3"> 26 </td>
+            </tr>
+            <tr>
+            <td class="cal alttime3"> 27 </td>
+            <td class="cal"> 28 </td>
+            <td class="cal greyedout"> 29 </td>
+            <td class="cal"> 30 </td>
+            <td class="cal greyedout"> 31 </td>
+            <td></td>
+            <td></td>
+            </tr>
+            </table>
+
+        </section>
+</div>
+        <div id="dropofftime">
+                <p class="boldtext margincont"> Drop off time:</p><br>
+                <p id="dynamicdropofftime" class="boldtext margincont" onclick="edittime()"></p><a href="javascript:void(0);" onclick="edittime()" class="editbutton">Edit</a>
+                <br><br>
+
+        </div>
+
+
+            <div id="selecttime" class="margincont">
+          
+
+<div id="leavecarcontainer">
+        <p class="boldtext inlinetext"> How will you pick up your child? </p><img src="imgs/additionalinfo.png" class="addinfo"></img> <br><br>
+        <div class="filledradio selecttime"  ></div><p class="inlinetext"> I will pick them up</p><br><br>
+        <div class="unfilledradio required selecttime" ></div> <p class="inlinetext"> They can travel home themselves</p><br><br>
+       
+</div>
+
+
+<!--- Shuttle Service Section-->
+<div class="shuttlecontainer">
+<p class="boldtext"  id="shuttleheader">Do you require your child to be driven home?</p>
+<div class="unchecked2"  data-forx="Requested" id="needshuttle"></div> <p class="inlinetext"> Yes, I need shuttle service </p><br><br>
+</div>
+
+
+
+
+        <button onclick="confirmopentrans();" class="nextconfirm" id="toconfirm">NEXT: CONFIRM</button></a><br>
+
+     
+ </div>
+          
+
+
+
+ </div>
+
+
+
+
+<!-- Confirm Header-->
+<div id="blankconfirmicon" class="stepicon">
+<span class="futureicon">4</span><p class="inlinetext">Confirm Your Appointment</p>
+</div>
+
+<div id="blankconfirmacticveicon" class="stepicon">
+                <span class="activeicon">4</span><p class="inlinetext boldtext">Confirm Your Request</p>
+</div>
+
+
+<div id="filledconfirmicon" class="stepicon" >
+        <span class="editicon"><img src="imgs/whitecheck.png"></img></span> <p id="sceduleDynamicInfo" class="smallindent"></p></div>
+
+
+
+<!-- CONFIRM SECTION -->
+<div id="confirmwrapper">
+        <!-- <p class="normalindent">Please enter your contact information:</p> -->
+
+        <!--New custom text fields for name email phone number-->
+
+        <div class="textwrap" id="textname">
+                <div class="textfield" contenteditable="true" onchange="reveal();" id="nametxt"><span class="defconfirmtext">Full Name*</span></div>
+                <p class="texttop"> Full Name* </p>
+                </div>
+
+                <div class="textwrap" id="textphone">
+                <div class="textfield" contenteditable="true" onchange="reveal();" id="phonetxt"><span class="defconfirmtext">Phone*</span></div>
+                <p class="texttop"> Phone* </p>
+                </div>
+
+
+                <div class="textwrap" id="textemail">
+                <div class="textfield" contenteditable="true" onchange="reveal();" id="emailtxt"><span class="defconfirmtext">Email*</span></div>
+                <p class="texttop"> Email* </p>
+                </div>
+
+        <!--old text fields-->
+        <!-- <input class="textfield" name="fullname" placeholder="Full Name">
+        <input class="textfield" name="phone" placeholder="Telephone Number">
+        <input class="textfield" name="email" placeholder="Email"> -->
+
+        <div id="contactoptions">
+                        <p class="boldtext" id="preferredheader"> Preferred method of contact: </p>
+        <div class="indcontentwrapper"><div class="unchecked"  data-forx="Phone call"></div> <label> Phone call </label></div>
+        <div class="indcontentwrapper"><div class="unchecked"  data-forx="SMS text message"></div><label> SMS text message</label></div>
+        <div class="indcontentwrapper"><div class="unchecked" required data-forx="Email"></div> <label>Email</label></div>
+        <p class="phonedisclaimer">Phone numbers may be used if we have questions regarding your Tutoring
+                         Appointment (including SMS messages).</p>
+
+        <!-- shuttle service check box--><br>
+        <!-- <p class="boldtext"  id="shuttleheader">Do you require shuttle service?</p>
+        <object class="unchecked2"  name="Requested"></object> <p class="inlinetext"> I need shuttle service </p><br><br>
+        </div> -->
+
+        <textarea name="textarea" id="commentbox"  name="commentbox" placeholder="What should we know about the student?"></textarea>
+
+        <button onclick="confirminfo()" class="nextconfirm">BOOK IT!</button></a><br>
+        <!-- <img  id="xreset" src="imgs/xsym.png"  onclick="xres();"></img> -->
+</div>
+
+
+
+
+<!-- END of App Body-->
+</div>
+
+
+</body>
+</html>

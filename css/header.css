@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#cantiresymbol {
+  margin: 4px 5px;
+  display: inline-block;
+  width: 12%;
+}
+
+body {
+  background-color: grey;
+
+  width: 100%;
+}
+#app {
+  width: 400px;
+  min-height: 667px;
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#headerapp {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+#headerapp {
+  margin-bottom: 10px;
+}
+
+.headerappvehicle:after {
+  content: "";
+  position: absolute;
+  background: #347635;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 25%;
+}
+
+.headerappservice:after {
+  content: "";
+  position: absolute;
+  background: #347635;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 50%;
+}
+
+.headerappscedule:after {
+  content: "";
+  position: absolute;
+  background: #347635;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 75%;
+}
+
+.headerappconfirm:after {
+  content: "";
+  position: absolute;
+  background: #347635;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+}
+@media screen and (max-width: 400px) {
+  #app {
+    width: 100%;
+  }
+
+  body {
+    background-color: white;
+  }
+}
+
+.headertext {
+  vertical-align: top;
+  display: inline-block;
+  padding-top: 12px;
+  font-size: 0.75em;
+}
+
+.dynamicheader {
+  vertical-align: top;
+  font-weight: bold;
+  font-size: 0.9em;
+  /* text-decoration:underline; */
+  display: inline-block;
+  position: relative;
+  bottom: 25px;
+  left: 15%;
+}
+
+#bookappoint {
+  margin-top: 6px;
+  width: 59%;
+  vertical-align: top;
+}
+
+@media screen and (min-width: 381px) {
+  .dynamicheader {
+    top: 30px;
+    right: 60%;
+    left: unset;
+  }
+}

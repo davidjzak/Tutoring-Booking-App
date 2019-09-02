@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif !important;
+    }
+
+body{
+        width: 100%;
+        background-color:grey;
+        }
+        
+        
+#v1select{
+    margin-top: 18px;
+    display: block;
+        }
+        
+.normalindent{
+    margin-left: 40px;
+            
+            }          
+
+
+.inline{
+ display: inline;
+}
+
+#vhead {
+margin-bottom:5px;
+width: 100%;
+}
+            
+
+#app{
+    margin: auto;
+    width: 400px;
+    min-height: 667px;
+    background-color: white;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+    
+    }
+
+    .verticalindent{
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+
+
+    #nextservice{
+        margin-top: 15px;
+        display:block;
+        display: none;
+    }
+
+    .stepicon{
+        
+        margin-left: 10px;
+        margin-bottom: 19px;
+    }
+
+
+#xreset{
+        position: absolute;
+        top: 17px;
+        right: 17px;
+        
+        }
+
+
+
+#nextconfirm{
+            background-color:#347636;
+            width: 153px;
+            height: 35px;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            margin: 18px 40px;
+            border: none;
+            display: none;
+            font-size: 14px;
+        }
+        
+.innerscaccordion{
+    position:relative; /* position relative important to maintain arrow absolute positioning */
+    padding: 10px;
+}
+
+    @media screen and (max-width:600px) {
+        #app{
+        width: 100%;
+        min-height: 100vh;
+        }
+
+        body{
+            background-color: white
+        }
+    }
+
+/* checkboxes consisttent make sure */
+    .unchecked{
+        margin-right: 10px;
+    background-image:url("../imgs/squareunchecked.png");
+    background-repeat: no-repeat;
+    border: 0;
+    border-radius: 5px;
+    background-size: 100%;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+    
+.checked {
+    margin-right: 10px;
+    background-image:url("../imgs/squarechecked.png");
+    background-repeat: no-repeat;
+    border: 0;
+ border-radius: 5px;
+    background-size: 100%;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+
+/* styling for checkboxes on confirm page, reproduced to prevent service function running again as they activate on intereactions with class */ 
+
+    .unchecked2{
+        margin-right: 10px;
+    background-image:url("../imgs/squareunchecked.png");
+    background-repeat: no-repeat;
+    border: 0;
+    border-radius: 5px;
+    background-size: 100%;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    }
+
+    
+.checked2 {
+    margin-right: 10px;
+    background-image:url("../imgs/squarechecked.png");
+    background-repeat: no-repeat;
+    border: 0;
+ border-radius: 5px;
+    background-size: 100%;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    }
+    
+
+ /* old edit button */   
+.edit{
+    width: 43px;
+    height: 23px;
+    border-radius: 6px;
+    background-color: white;
+    color: #666;
+    border:.7px solid #999;
+    margin:0px;
+    vertical-align: middle;
+    text-decoration: none;
+    }
+    
+    .edit:hover{
+    background-color: #444;
+    color: white;
+    
+    }
+
+    .stepedit {
+    vertical-align: middle;
+    display:inline-block;
+
+    }
+
+    .stepcontainer{
+
+        width: 290px;
+        display: inline-block;
+        padding-top: 7px;
+        padding-bottom: 2px;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    
+
+/* containers for new transitional / dynamic elements */
+    #servicecontainer{
+display: none;
+    }
+
+#filledvehicleicon {
+position: relative;
+display: none;
+}
+
+#blankserviceactiveicon{
+
+    display: none;
+}
+
+#blankserviceicon {
+
+    display: block;
+}
+
+#blanksceduleactiveicon {
+display:none;
+}
+#filledserviceicon {
+    position: relative;
+    display:none;
+}
+
+#scedulewrapper {
+display: none;
+}
+
+#confirmwrapper {
+    display:none;
+}
+
+
+/* styling for icon circle */
+
+.activeicon{
+    line-height: 23px;
+    vertical-align: middle;
+    text-align: center;
+    height: 23px;
+    width: 23px;
+    border-radius: 100%;
+    color: white;
+    font-weight:bold;
+    background-color: #347636;
+    display: inline-block;
+    margin-right: 8px;
+    }
+    
+    .editicon {
+    line-height: 25px;
+    vertical-align: middle;
+    text-align: center;
+    height: 23px;
+    width: 23px;
+    border-radius: 100%;
+    color: white;
+    font-weight: bold;
+    background-color: #888;
+    display: inline-block;
+    margin-right: 8px;
+    }
+    
+    
+    .futureicon {
+    line-height: 23px;
+    vertical-align: middle;
+    text-align: center;
+    height: 23px;
+    width: 23px;
+    border-radius: 100%;
+    color: white;
+    font-weight:bold;
+    background-color: #888;
+    display: inline-block;
+    margin-right: 8px;
+    }
+
+.boldtext {
+    vertical-align: middle;
+font-weight: bold;
+font-size: 1.1em;
+display: inline-block;
+}
+
+.inlinetext {
+display:inline;
+}
+
+#filledconfirmicon {
+
+    display:none;
+}
+
+#blankconfirmacticveicon{
+    display:none;
+}
+
+#filledsceduleicon {
+position: relative;
+
+display: none;
+}
+
+#blankvehicleicon {
+    margin-bottom: 0px;
+}
+
+.smallindent {
+   /* margin-left: 10px; */
+}
+
+.editbutton{
+    font-weight: 600;
+    color: black;
+    text-decoration: underline;
+    position:absolute;
+    right: 5%;
+}
+
+.stopoverflow {
+    width: 74%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.test {
+    position: relative;
+}
+
+header {
+    position: relative;
+}
+
+
+.unfilledradio{
+    margin-right: 10px;
+background-image:url("../imgs/unfilledradio.png");
+background-repeat: no-repeat;
+border: 0;
+border-radius: 5px;
+background-size: 100%;
+height: 18px;
+width: 18px;
+display: inline-block;
+vertical-align: middle;
+}
+
+
+.filledradio {
+margin-right: 10px;
+background-image:url("../imgs/filledradio.png");
+background-repeat: no-repeat;
+border: 0;
+border-radius: 5px;
+background-size: 100%;
+height: 18px;
+width: 18px;
+display: inline-block;
+vertical-align: middle;
+}
+
+.addinfo {
+    vertical-align: middle;
+    margin-left: 5px;
+}

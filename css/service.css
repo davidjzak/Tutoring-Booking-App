@@ -1,0 +1,59 @@
+.saccordion{
+    width: 315.5px;
+    border-radius: 6px;
+    border: 1px solid #e8e8e8;
+    margin-left: 36px;
+    box-sizing: border-box;
+    margin-bottom: 4px;
+    
+    
+}
+.commentspace{
+    margin-top: 22px;
+    margin-left: 34px;
+}
+
+#commentbox2{
+    width: 315.5px;
+    margin: auto;
+    display: block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+    padding-left: 8px;
+    padding-top: 8px;
+    font-size: .99em;
+    min-height: 38px;
+    position: relative;
+    height: 33px;
+    margin-left: 36px;
+}
+
+/* position for arrows on service page drop down */
+.arrow{
+    right: 10px;
+    position: absolute; 
+}
+
+.hideaccord{
+    display:none;
+}
+
+span.sdesc {
+    text-decoration: underline;
+}
+
+.innerscaccordion:hover {
+
+    background-color:rgba(100, 100,100, .1);
+    }
+
+    #serviceactive{
+        margin-left: 9px;
+        margin-top: 10px;
+    }
+
+#outsidebox{
+    margin-left: 45px;
+    margin-bottom: 7px;
+}
